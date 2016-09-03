@@ -36,8 +36,6 @@ class SlimAuthFacade
 
     /**
      * Auth method
-     *
-     * @return bool
      * @throws \Exception
      */
     public function auth() {
@@ -54,7 +52,7 @@ class SlimAuthFacade
             $this->session->set($messages[AuthResponse::AUTHRESPONSE_ATTRKEYSESSION], $messages[AuthResponse::AUTHRESPONSE_ATTRSESSION]);
         }
 
-        return true;
+        return;
     }
 
     public function isValid() {

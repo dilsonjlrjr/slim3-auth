@@ -8,8 +8,8 @@
 
 namespace Tests;
 
-use SlimAuth\AuthAdapterInterface;
 use SlimAuth\AuthResponse;
+use SlimAuth\AuthAdapterInterface;
 
 class AuthTestAdapter implements AuthAdapterInterface
 {
