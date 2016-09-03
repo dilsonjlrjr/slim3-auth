@@ -16,8 +16,11 @@
             "Tests\\": "tests"
         }
     },
+    "require-dev": {
+        "slim/slim": "^3.0"
+    },
     "require": {
-        "slim/slim": "^3.0",
+        "php": ">=7.0",
         "akrabat/rka-slim-session-middleware": "^2.0"
     }
 }
