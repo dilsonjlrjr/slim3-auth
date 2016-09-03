@@ -1,0 +1,23 @@
+{
+    "name": "dilsonrabelo/slim3-auth",
+    "description": "Slim Auth",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dilson Rabelo",
+            "email": "dilsonrabelo.unasus@gmail.com",
+            "homepage": "http://www.dilsonjunior.eti.br/"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SlimAuth\\": "src/SlimAuth",
+            "Tests\\": "tests"
+        }
+    },
+    "require": {
+        "slim/slim": "^3.0",
+        "akrabat/rka-slim-session-middleware": "^2.0"
+    }
+}
