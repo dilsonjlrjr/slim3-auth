@@ -46,18 +46,18 @@ class SlimAuthFacade
             throw $ex;
         }
 
-        $messages = $this->authResponse->getMessages();
+        $message = $this->authResponse->getMessage();
 
-        if ($messages[AuthResponse::AUTHRESPONSE_ATTRCODE] == AuthResponse::AUTHRESPONSE_SUCCESS) {
-            $this->session->set($messages[AuthResponse::AUTHRESPONSE_ATTRKEYSESSION], $messages[AuthResponse::AUTHRESPONSE_ATTRSESSION]);
+        if ($message->getCode() == AuthResponse::AUTHRESPONSE_SUCCESS) {
+            $this->session->set($message->getKeysession(), $message->getAttrsession());
         }
 
         return;
     }
 
     public function isValid() {
-        $messages = $this->authResponse->getMessages();
-        return ($messages[AuthResponse::AUTHRESPONSE_ATTRCODE] == AuthResponse::AUTHRESPONSE_SUCCESS);
+        $message = $this->authResponse->getMessage();
+        return ($message->getCode() == AuthResponse::AUTHRESPONSE_SUCCESS);
     }
 
     public function getAuthResponse() {
